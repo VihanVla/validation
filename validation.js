@@ -8,11 +8,17 @@ form.addEventListener("submit", e=>{
 })
 
 form.username.addEventListener("keyup", e=>{
+    if (e.target.value){
     username.textContent = e.target.value
-})
+}
+else{
+    username.textContent = "please enter your username"
+}})
 form.pasword.addEventListener("keyup" , e=>{
-
-    password.textContent = "*".repeat(e.target.value.length)
+    if (e.target.value){
+    password.textContent = "*".repeat(e.target.value.length)} else {
+        password.textContent = "please enter your pasword"
+    }
 })
 
 form.pasword.addEventListener("keyup", e=>{
